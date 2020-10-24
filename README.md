@@ -11,5 +11,5 @@ To set this up, install sqlite3. Then run `sqlite3 bible.db`. Once the sqlite co
 
 ## Running
 
-To run the server, assuming an appropriately configured server, run `ruby devo.rb`
+To run the server, after setting up, run `ruby devo.rb`
 
