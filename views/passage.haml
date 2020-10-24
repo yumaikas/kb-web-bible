@@ -1,0 +1,29 @@
+- curr_chapter = @verses.first[:chapter] - 1
+- curr_book = nil
+
+%a{href: @link_add_start} 
+	Add Verse
+%a{href: @link_pop_start} 
+	Remove Verse
+
+- @verses.each do |v|
+	- if curr_book != v[:book]
+		- curr_book = v[:book]
+		%h2
+			= @books[curr_book][:long_name]
+	- if curr_chapter != v[:chapter]
+		- curr_chapter = v[:chapter]
+		%h3 
+			Chapter 
+			= curr_chapter
+	%span
+		%sup
+			= v[:startVerse]
+		= v[:verseText]
+
+%br
+%br
+%a{ href: @link_add_end} 
+	Add Verse
+%a{ href: @link_pop_end} 
+	Remove Verse

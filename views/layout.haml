@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %title Devos
+    %link(rel="stylesheet" href="/css/app.css")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+  %body
+    #wrapper
+      #header
+        %h1 
+          %a(href="/")
+            Devos
+
+      #content
+        =yield
+
+    %br
+    %br
+    %div
+      The bible version used is the
+      %a{href: "https://worldenglish.bible/"}
+        World English Bible.
+
+
+  %footer
+    %script(src="/js/gotoB.min.js")

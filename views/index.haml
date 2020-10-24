@@ -1,0 +1,15 @@
+%details 
+  %summary.larger
+    Old Testament
+  %ul
+    - @books.reject{|x| x[:book_num] >= 40}.each do |b|
+      %li.larger
+        = "<a href=\"/book/#{b[:book_code]}\">#{b[:short_name]}</a>"
+
+%details 
+  %summary.larger
+    New Testament
+  %ul
+    - @books.reject{|x| x[:book_num] < 40}.each do |b|
+      %li.larger
+        = "<a href=\"/book/#{b[:book_code]}\">#{b[:short_name]}</a>"

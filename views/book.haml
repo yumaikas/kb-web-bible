@@ -1,0 +1,8 @@
+%h2
+  = @book[:long_name]
+
+
+%div{class: "chapter-grid"}
+  - @chapters.each_with_index do |c, i|
+    %a{class: "chapter-num-link larger", href: "/range/#{c[:canon_order]}/#{c[:canon_order]}/"}
+      = c[:num]
